@@ -68,7 +68,7 @@ export function Hero() {
           className="w-full h-auto"
           priority
         />
-      </motion.div>
+      </div>
     </header>
   )
 }
