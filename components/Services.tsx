@@ -1,8 +1,5 @@
-"use client"
-
 import Image from "next/image"
 import Link from "next/link"
-import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { SectionHeader } from "@/components/SectionHeader"
@@ -75,20 +72,14 @@ export function Services() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
         {data.services.map((service, index) => (
-          <motion.div
+          <Card
             key={index}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
+            className={cn(
+              "shadow-3xl rounded-2xl border border-foreground/10",
+              service.cardClass,
+              "h-[280px]"
+            )}
           >
-            <Card
-              className={cn(
-                "shadow-3xl rounded-2xl border border-foreground/10",
-                service.cardClass,
-                "h-[280px]"
-              )}
-            >
             <CardContent className="flex flex-col justify-between p-6 w-full h-full">
               <div className="flex items-start gap-4 w-full">
                 <div className="w-1/2 flex flex-col">
@@ -132,7 +123,6 @@ export function Services() {
               </div>
             </CardContent>
           </Card>
-          </motion.div>
         ))}
       </div>
 
