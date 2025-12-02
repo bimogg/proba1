@@ -25,10 +25,7 @@ const Carousel = React.forwardRef<
   CarouselProps
 >(({ opts, setApi, plugins, className, children, ...props }, ref) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(
-    {
-      ...opts,
-      axis: "horizontal",
-    },
+    opts,
     plugins
   )
 

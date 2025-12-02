@@ -104,10 +104,10 @@ const useFormField = () => {
     }
   }
 
-  const { getFieldState, formState } = formContext || {}
+  const formState = formContext?.formState
   
-  const fieldState = getFieldState && formState 
-    ? getFieldState(fieldContext.name, formState) 
+  const fieldState = formContext && formState
+    ? formContext.getFieldState(fieldContext.name, formState)
     : { error: null }
 
   const id = itemContext?.id || ""

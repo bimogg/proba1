@@ -68,7 +68,7 @@ export function WorkingProcess() {
                 >
                   <div className="px-4 flex items-center justify-start gap-3 lg:gap-4">
                     <span className="font-bold text-2xl lg:text-3xl text-foreground">0{index + 1}</span>
-                    <Separator orientation="vertical" className="h-6 bg-foreground/20" />
+                    <div className="h-6 w-px bg-foreground/20" />
                     <span className="text-lg lg:text-xl font-medium text-foreground">{process.title}</span>
                   </div>
 
