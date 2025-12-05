@@ -1,11 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: 'export',
+  outputFileTracingRoot: require('path').join(__dirname),
   images: {
     unoptimized: true,
+    remotePatterns: [],
   },
-  trailingSlash: true,
 }
 
 module.exports = nextConfig
